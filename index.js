@@ -4,16 +4,16 @@ const mongoose = require('mongoose')
 
 app.use(express.json())
 
-
+/*  */
 
 //conecta ao banco de dados local
-mongoose.connect('mongodb://localhost:27017/dev-library', err =>{
+mongoose.connect('mongodb+srv://teste:teste123@cluster0.9iqak.mongodb.net/?retryWrites=true&w=majority', err =>{
     if (err) return console.log(err)
 
     console.log('DB Connected')
 })
-
-//importa as rotas
+/* mongodb://localhost:27017/dev-library
+//importa as rotas */
 
 const bookRoutes = require('./routes/book')
 
